@@ -77,7 +77,14 @@ int main(void) {
     draw_enemy(enemy[0]);
     draw_crash_site();
 
+    attron(COLOR_PAIR(6));
+    mvprintw(35, 0, "|_____________________________________________________________________________________________________________|");
+    for(i = 0; i < 35; i++){
+        mvprintw(i, 110, "|");
+    }
+
     while(running == 1){
+
         attron(COLOR_PAIR(1));
         mvprintw(0, 0, "                                                                                        ");
         mvprintw(1, 0, "score: ");
